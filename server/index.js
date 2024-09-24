@@ -7,6 +7,8 @@ import cookieParser from "cookie-parser";
 import "dotenv/config";
 
 const app = express();
+const port = process.env.PORT || 4000;
+
 app.use(
   cors({
     origin: ["http://localhost:5173"],
@@ -38,6 +40,6 @@ app.get("/verify", verifyUser, (req, res) => {
   return res.json({ Status: true, role: req.role, id: req.id });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log("Server is running");
 });
