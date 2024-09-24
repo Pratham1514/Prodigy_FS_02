@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["employee-management-system-phd2pszr5-prathamesh-gites-projects.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
