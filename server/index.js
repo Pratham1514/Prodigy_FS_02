@@ -9,7 +9,8 @@ import "dotenv/config";
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(
+app.options(
+  "*",
   cors({
     origin: ["https://employee-management-system-silk-phi.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
