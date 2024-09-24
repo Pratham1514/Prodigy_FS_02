@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 
 app.use(
   cors({
-    origin: ["employee-management-system-phd2pszr5-prathamesh-gites-projects.vercel.app"],
+    origin: ["https://employee-management-system-silk-phi.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
