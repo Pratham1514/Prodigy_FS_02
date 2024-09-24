@@ -3,7 +3,8 @@ import cors from "cors";
 import { adminRouter } from "./Routes/AdminRoute.js";
 import { EmployeeRouter } from "./Routes/EmployeeRoute.js";
 import Jwt from "jsonwebtoken";
-import cookieParser from 'cookie-parser'
+import cookieParser from "cookie-parser";
+import "dotenv/config";
 
 const app = express();
 app.use(
@@ -14,7 +15,7 @@ app.use(
   })
 );
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
 app.use("/auth", adminRouter);
 app.use("/employee", EmployeeRouter);
 app.use(express.static("Public"));
@@ -37,6 +38,6 @@ app.get("/verify", verifyUser, (req, res) => {
   return res.json({ Status: true, role: req.role, id: req.id });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is running");
 });
