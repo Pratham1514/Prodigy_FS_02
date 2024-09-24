@@ -6,7 +6,7 @@ const Start = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:3000/verify").then((result) => {
+    axios.get("https://employee-management-1k76.onrender.com/verify").then((result) => {
       if (result.data.Status) {
         if (result.data.role === "admin") {
           navigate("/dashboard");

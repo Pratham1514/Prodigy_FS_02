@@ -7,7 +7,7 @@ const Category = () => {
   
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/category")
+      .get("https://employee-management-1k76.onrender.com/auth/category")
       .then((result) => {
         if (result.data.Status) {
           setCategory(result.data.Result);

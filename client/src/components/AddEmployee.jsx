@@ -17,7 +17,7 @@ const AddEmployee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/category")
+      .get("https://employee-management-1k76.onrender.com/auth/category")
       .then((result) => {
         if (result.data.Status) {
           setCategory(result.data.Result);
@@ -40,7 +40,7 @@ const AddEmployee = () => {
     formData.append("category_id", employee.category_id);
 
     axios
-      .post("http://localhost:3000/auth/add_employee", formData)
+      .post("https://employee-management-1k76.onrender.com/auth/add_employee", formData)
       .then((result) => {
         if (result.data.Status) {
           console.log(result.data)

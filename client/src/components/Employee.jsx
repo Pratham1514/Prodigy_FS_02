@@ -8,7 +8,7 @@ const Employee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/employee")
+      .get("https://employee-management-1k76.onrender.com/auth/employee")
       .then((result) => {
         if (result.data.Status) {
           setEmployee(result.data.Result);
@@ -22,7 +22,7 @@ const Employee = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3000/auth/delete_employee/" + id)
+      .delete("https://employee-management-1k76.onrender.com/auth/delete_employee/" + id)
       .then((result) => {
         if (result.data.Status) {
           window.location.reload();
@@ -73,7 +73,7 @@ const Employee = () => {
                 <td className="p-3 text-base">{e.name}</td>
                 <td className="p-3 text-base ">
                   <img
-                    src={`http://localhost:3000/Images/` + e.image}
+                    src={`https://employee-management-1k76.onrender.com/Images/` + e.image}
                     className="w-10 h-10 rounded-[50%]"
                   />
                 </td>

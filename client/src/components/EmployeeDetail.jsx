@@ -10,7 +10,7 @@ const EmployeeDetail = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/employee/detail/" + id)
+      .get("https://employee-management-1k76.onrender.com/employee/detail/" + id)
       .then((result) => {
         setEmployee(result.data[0]);
       })
@@ -18,7 +18,7 @@ const EmployeeDetail = () => {
   }, []);
 
   const handleLogout = () => {
-    axios.get("http://localhost:3000/employee/logout").then((result) => {
+    axios.get("https://employee-management-1k76.onrender.com/employee/logout").then((result) => {
       if (result.data.Status) {
         localStorage.removeItem("valid");
         navigate("/");
@@ -37,7 +37,7 @@ const EmployeeDetail = () => {
         <h5 className="md:text-[23px] text-[13px]">Employee Details</h5>
         <div className="mt-3 flex flex-col items-center">
           <img
-            src={`http://localhost:3000/Images/` + employee.image}
+            src={`https://employee-management-1k76.onrender.com/Images/` + employee.image}
             className="md:w-[300px] w-[150px] md:h-[300px] h-[150px] rounded-[100%]"
           />
           <div className="mt-7 flex flex-col items-center gap-5">

@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:3000/auth/adminlogin", values)
+      .post("https://employee-management-1k76.onrender.com/auth/adminlogin", values)
       .then((result) => {
         if (result.data.loginStatus) {
           localStorage.setItem("valid", true);
